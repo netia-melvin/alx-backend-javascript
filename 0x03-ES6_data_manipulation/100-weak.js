@@ -1,13 +1,3 @@
-
-/**
- * Tracks the number of calls made to an API's endpoint.
- * @param {{
- *   protocol: String,
- *   name: String,
- * }} endpoint - The endpoint to make a request to.
- * @author Melvin Netia <https://github.com/netia
- */
-
 export const weakMap = new WeakMap();
 
 export function queryAPI(endpoint) {
