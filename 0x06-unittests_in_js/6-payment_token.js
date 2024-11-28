@@ -1,19 +1,10 @@
 /**
- * getPaymentTokenFromAPI test suite
+ * Checks state of payment token
+ * @param   {boolean} success
+ * @returns {promise}
  */
-const { expect } = require('chai');
-const getPaymentTokenFromAPI = require('./6-payment_token');
+function getPaymentTokenFromAPI(success) {
+  if (success) return Promise.resolve({ data: 'Successful response from the API' });
+}
 
-describe('getPaymentTokenFromAPI', function() {
-  describe('#Async test', function() {
-    
-    it('should test response from payment API', function(done) {
-      getPaymentTokenFromAPI(true)
-        .then((res) => {
-          expect(res).to.be.an('object')
-            .with.property('data', 'Successful response from the API');
-          done();
-        });
-    });
-  });
-});
+module.exports = getPaymentTokenFromAPI;
